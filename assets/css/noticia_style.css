@@ -1,0 +1,132 @@
+/* Estilo geral */
+body {
+    background:#B3D5FC;
+}
+
+
+.slider{
+    margin: 0 auto;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;/*faz as imagens sumirem, ficando apenas 1*/
+}
+.slides{
+    width: 400%;
+    height: 400px;
+    display: flex;
+}
+.slides input{
+    display: none
+}
+.slide{
+    width: 25%;
+    position: relative;
+}
+.slide img{
+    width: 900px;
+    height:auto;    
+}
+.manual-navigation{ /*mexe na posição dos botões*/
+    position: absolute;
+    width: 900px;
+    margin-top: -40px;
+    display:flex;
+    justify-content: center;
+    
+}
+.manual-btn{ /*mexe no estilo dos botões*/
+    border: 2px solid #fff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;   
+}
+.manual-btn:not(:last-child){ /*separa os botões*/
+    margin-right: 40px;
+}
+.manual-btn:hover{
+    background-color: #fc0303e0;
+    background-size: cover;
+}
+#radio1:checked ~ .first{ /*joga a imagem para a esquerda*/
+    margin-left: 0;
+}
+#radio2:checked ~ .first{
+    margin-left: -25%;
+}
+#radio3:checked ~ .first{
+    margin-left: -50%;
+}
+#radio4:checked ~ .first{
+    margin-left: -80%;
+}
+
+.navigation-auto div{
+    border: 2px solid black;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+.navigation-auto{
+    position: absolute;
+    width: 900px;
+    margin-top: 360px;
+    display: flex;
+    justify-content: center;
+}
+.navigation-auto div:not(:last-child){
+    margin-right: 40px;
+} 
+
+#radio1:checked ~ .navigation-auto .auto-btn1{ /*Deixa o botão com cor quando a notícia está selecionada*/
+    background-color: red;
+}    
+#radio2:checked ~ .navigation-auto .auto-btn2{
+    background-color: red;
+}    
+#radio3:checked ~ .navigation-auto .auto-btn3{
+    background-color: red;
+}    
+#radio4:checked ~ .navigation-auto .auto-btn4{
+    background-color: red;
+}    
+
+
+@media (max-width: 768px) {
+    .carousel-caption {
+        left: 5%;
+        right: 5%;
+        bottom: 10px; /* Ajusta a posição da legenda */
+    }
+
+    .carousel-control-next,
+    .carousel-control-prev {
+        width: 10%; /* Reduz o tamanho dos controles */
+    }
+
+    .carousel-indicators {
+        margin-right: 10%;
+        margin-left: 10%; /* Ajusta os indicadores */
+    }
+}
+.carousel-container {
+    height: calc(100vh - 200px); /* Altura do carousel subtraindo a altura do header e footer */
+    position: relative; /* Permite posicionar elementos dentro */
+    z-index: 0; /* Camada abaixo do conteúdo */
+    margin: 0;
+}
+
+.carousel-caption {
+    font-size: 1.5rem; /* Tamanho de fonte maior em telas grandes */
+}
+.carousel-inner img {
+    width: 100%;
+    height: auto; /* Mantém a proporção da imagem */
+}
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+    width: 30px;
+    height: 30px; /* Aumenta os ícones de controle */
+}
+

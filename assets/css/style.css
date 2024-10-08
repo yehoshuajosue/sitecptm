@@ -1,0 +1,274 @@
+/* Reset básico */
+:root {
+    -background-header: #c62828;
+    -background-footer: #c62828;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Garantir altura total para html e body */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo geral */
+body {
+    font-family: Calibri, Times, serif, sans-serif !important;
+    line-height: 1.6;
+    background: #b3d5fc; /* Cor de fundo clara */
+    background-image: url("/assets/img/trem.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+}
+/* Logo */
+#logo4 {
+    background-color: #ffff;
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    border: 10px solid;
+}
+#alinhado {
+    background-color: #ffff;
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+}
+#sao_paulo {
+    background-color: black;
+    border-radius: 10px;
+    border: 7px solid;
+    border-color: black;
+}
+
+/* Estilo para imagens em artigos */
+.content img {
+    margin: 5px; /* Espaçamento entre as imagens */
+    max-width: 100%; /* Garante que as imagens não ultrapassem o container */
+}
+
+/* Cabeçalho */
+header {
+    background: color-mix(in srgb, #c62828, transparent 10%); /* Vermelho escuro */
+    color: #fff; /* Cor do texto */
+    padding: 1rem 0;
+}
+
+header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header h1 {
+    margin-bottom: 2px;
+}
+
+.container nav ul {
+    display: flex;
+    justify-content: center !important;
+    list-style: none;
+    padding: 0 !important;
+    align-items: center !important;
+    margin: 0 !important;
+}
+
+nav ul li {
+    margin: 0 1rem  !important;
+    bottom: 0;
+    
+}
+
+nav ul li a {
+    font-size: 1.2rem !important;
+    color: #fff;
+    text-decoration: none !important;
+    font-weight: bold;
+    padding: 0.5rem 1rem !important; /* Espaçamento interno dos links */
+    border-radius: 5px;
+    background: linear-gradient(to top, #c62828 0%, #c62828 100%); /* Efeito de transição suave */
+    transition: background 0.5s, color 0.5s ease;
+    background: color-mix(in srgb, var(--surface), transparent 10%);
+}
+nav ul li h4 a {
+    color: #c62828 !important;
+    background: linear-gradient(to top, #fff 0%, #fff 100%) !important;
+}
+
+nav ul li a:hover, nav ul li a:focus {
+    background: linear-gradient(to top, #fff 100%, #c62828 0%); /* Cor de fundo ao passar o cursor */
+    color: #c62828; /* Cor do texto ao passar o cursor */
+}
+
+/* Área principal */
+main {
+    flex: 1; /* Faz o main ocupar o espaço restante */
+    padding: 1rem;
+}
+
+.hero {
+    background: color-mix(in srgb, #e53935, transparent 10%); /* Vermelho vibrante */
+    color: #fff;
+    text-align: center;
+    padding: 5px 5px;
+    border-radius: 8px;
+}
+
+.hero h2 {
+    margin-bottom: 1rem;
+}
+
+/* Conteúdo */
+.content {
+    margin-top: 1rem;
+}
+
+.content .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem; /* Espaçamento entre os itens */
+}
+
+/* Ajusta o estilo para artigos */
+.content article {
+    background: color-mix(in srgb, #ffebee, transparent 10%); /* Vermelho muito claro */
+    padding: 1rem;
+    border-radius: 8px;
+    flex: 1 1 calc(33.333% - 2rem); /* Ajusta a largura para 3 colunas, considerando o espaço entre elas */
+    display: flex; /* Adicionado para garantir que os itens no article fiquem lado a lado */
+    flex-wrap: wrap; /* Permite que os itens se movam para a linha seguinte se necessário */
+    justify-content: center; /* Opcional: alinha as imagens no centro horizontalmente */
+}
+
+
+
+.content article h3 {
+    margin-bottom: 0.5rem;
+    color: #c62828; /* Vermelho escuro para o título */
+}
+
+/* Rodapé */
+footer {
+    background: color-mix(in srgb, #c62828, transparent 0%);
+    color: #fff;
+    padding: 1rem;
+    position:relative;/* Garante que o rodapé não fique fixo */
+    width: 100%; /* Garante que o rodapé ocupe toda a largura da tela */
+    display: flex; /* Usado para layout flexível */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    flex-direction: column; /* Organiza os itens em coluna */
+    margin-top: auto;
+}
+.footer-content {
+    display: flex; /* Usado para layout flexível */
+    justify-content: space-between; /* Distribui o espaço entre o texto e a imagem */
+    align-items: center; /* Alinha verticalmente o texto e a imagem */
+    width: 100%; /* Garante que o conteúdo ocupe toda a largura disponível */
+    max-width: auto; /* Ajuste conforme necessário para limitar a largura máxima */
+    padding: 0 1rem; /* Adiciona um pouco de padding horizontal */
+}
+
+footer h3 {
+    margin: 0; /* Remove a margem padrão */
+    font-size: 1rem; /* Ajuste o tamanho da fonte conforme necessário */
+    font-weight: bold; /* Define o texto como negrito */
+    text-align: center; /* Centraliza o texto */
+    color: #ffebee;
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    nav ul li {
+        margin: 0;
+    }
+
+    .content .container {
+        flex-direction: column;
+    }
+
+    .content article {
+        flex: 1 1 100%;
+        margin: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 1rem 0.5rem;
+    }
+
+    .content {
+        padding: 0.5rem;
+    }
+}
+/* Responsividade do rodapé */
+@media (max-width: 768px) {
+    footer {
+        padding: 0.5rem; /* Ajusta o padding para telas menores */
+    }
+
+    .footer-content {
+        flex-direction: column; /* Muda a direção dos itens para coluna em telas menores */
+        align-items: center; /* Centraliza os itens horizontalmente */
+    }
+
+    footer #sao_paulo {
+        margin-top: 0.5rem; /* Espaço acima da imagem */
+        width: 100px; /* Ajusta o tamanho da imagem para telas menores */
+    }
+
+    footer h4 {
+        font-size: 0.875rem; /* Ajusta o tamanho da fonte para telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    footer h4 {
+        font-size: 0.75rem; /* Ajusta o tamanho da fonte para telas muito pequenas */
+    }
+
+    footer #sao_paulo {
+        width: 80px; /* Ajusta ainda mais o tamanho da imagem para telas pequenas */
+    }
+}
+.social-media {
+    display: flex;
+    justify-content: center;
+    width: 100px; 
+    height: auto;
+    margin-top: 10px;
+}
+
+.social-media a {
+
+    font-weight: bold;
+    padding: 0.5rem; 
+    border-radius: 8px;
+    text-decoration: none;
+    color: #fff; 
+}
+
+.social-media a:hover {
+    background: linear-gradient(to top, #fff 100%, #c62828 0%); 
+    color: #c62828; /* Tom mais escuro ao passar o mouse */
+}
+
+.social-media i {
+    font-size: 17px; /* Tamanho do ícone */
+}
+
